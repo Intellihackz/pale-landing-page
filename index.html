@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One-Click Website Color Palette Extractor | Pale</title>
+    <!-- //icon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#2d89ef" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      property="og:title"
+      content="One-Click Website Color Palette Extractor"
+    />
+    <meta
+      property="og:description"
+      content="Extract color palettes from any website with just one click"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co/DQxPk7p/brandbird-8.png"
+    />
+    <meta property="og:url" content="https://palle-extractor.netlify.app/" />
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://palle-extractor.netlify.app" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="One-Click Website Color Palette Extractor"
+    />
+    <meta
+      property="og:description"
+      content="Extract color palettes from any website with just one click"
+    />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co/DQxPk7p/brandbird-8.png"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="palle-extractor.netlify.app" />
+    <meta
+      property="twitter:url"
+      content="https://palle-extractor.netlify.app"
+    />
+    <meta
+      name="twitter:title"
+      content="One-Click Website Color Palette Extractor"
+    />
+    <meta
+      name="twitter:description"
+      content="Extract color palettes from any website with just one click"
+    />
+    <meta
+      name="twitter:image"
+      content="https://i.ibb.co/DQxPk7p/brandbird-8.png"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <!-- <body class="font-sans bg-gray-100 text-gray-900">
+    <header class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+      <nav
+        class="container mx-auto px-4 sm:px-6 py-3 flex flex-col sm:flex-row justify-between items-center"
+      >
+        <div class="text-xl font-bold mb-4 sm:mb-0">
+          Color Palette Extractor
+        </div>
+        <div
+          class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4"
+        >
+          <a href="#features" class="hover:text-gray-200 hidden sm:inline-block"
+            >Features</a
+          >
+          <a
+            href="#how-it-works"
+            class="hover:text-gray-200 hidden sm:inline-block"
+            >How It Works</a
+          >
+          <a href="#install2" class="hover:text-gray-200 hidden sm:inline-block"
+            >How to Install</a
+          >
+          <a
+            href="https://techwithtobi.lemonsqueezy.com/buy/e1e934a2-18bb-4e76-9612-c3cb12d4b9fc"
+            class="bg-white text-indigo-600 px-4 py-2 rounded-full font-semibold hover:bg-gray-100 transition duration-300"
+            >Add to Chrome</a
+          >
+        </div>
+      </nav>
+      <div class="container mx-auto px-4 sm:px-6 py-16 text-center">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          One-Click Color Palette Extractor
+        </h1>
+        <p class="text-lg sm:text-xl mb-8">
+          Extract color palettes from any webpage with just one click!
+        </p>
+        <a
+          href="#install2"
+          class="bg-white text-indigo-600 px-6 sm:px-8 py-3 rounded-full font-semibold text-lg hover:bg-gray-100 transition duration-300"
+          >Get Started</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6">
+          <h2 class="text-2xl sm:text-3xl font-bold text-center mb-12">
+            Key Features
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12 mx-auto mb-4 text-indigo-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
+                />
+              </svg>
+              <h3 class="text-xl font-semibold mb-2">One-Click Extraction</h3>
+              <p>Instantly extract colors from any webpage</p>
+            </div>
+            <div class="text-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12 mx-auto mb-4 text-indigo-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+                />
+              </svg>
+              <h3 class="text-xl font-semibold mb-2">Smart Filtering</h3>
+              <p>Filters out common background colors</p>
+            </div>
+            <div class="text-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12 mx-auto mb-4 text-indigo-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 10h16M4 14h16M4 18h16"
+                />
+              </svg>
+              <h3 class="text-xl font-semibold mb-2">Easy-to-View Palette</h3>
+              <p>Displays colors in an intuitive format</p>
+            </div>
+            <div class="text-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12 mx-auto mb-4 text-indigo-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                />
+              </svg>
+              <h3 class="text-xl font-semibold mb-2">Copy Color Codes</h3>
+              <p>Easily copy color codes with a click</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 sm:px-6">
+          <h2 class="text-2xl sm:text-3xl font-bold text-center mb-12">
+            How It Works
+          </h2>
+          <div
+            class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12"
+          >
+            <div class="bg-white p-6 rounded-lg shadow-md max-w-sm w-full">
+              <h3 class="text-xl font-semibold mb-4">
+                1. Install the Extension
+              </h3>
+              <p>
+                Add One-Click Color Palette Extractor to your Chrome browser
+                from the Chrome Web Store.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md max-w-sm w-full">
+              <h3 class="text-xl font-semibold mb-4">2. Browse Any Website</h3>
+              <p>Navigate to the webpage you want to extract colors from.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md max-w-sm w-full">
+              <h3 class="text-xl font-semibold mb-4">3. Extract Colors</h3>
+              <p>
+                Click the extension icon to instantly extract and view the color
+                palette.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="install2" class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6">
+          <h2 class="text-2xl sm:text-3xl font-bold text-center mb-12">
+            How to Install
+          </h2>
+          <div class="max-w-3xl mx-auto">
+            <ol class="list-decimal pl-6 space-y-6">
+              <li class="mb-4">
+                <h3 class="text-lg sm:text-xl font-semibold mb-2">
+                  Download the Extension Files
+                </h3>
+                <p>
+                  Download the extension files from our GitHub repository or the
+                  provided download link.
+                </p>
+              </li>
+              <li class="mb-4">
+                <h3 class="text-lg sm:text-xl font-semibold mb-2">
+                  Open Chrome Extensions Page
+                </h3>
+                <p>
+                  In Chrome, navigate to
+                  <code class="bg-gray-200 px-2 py-1 rounded"
+                    >chrome://extensions/</code
+                  >
+                  or go to Menu > More Tools > Extensions.
+                </p>
+              </li>
+              <li class="mb-4">
+                <h3 class="text-lg sm:text-xl font-semibold mb-2">
+                  Enable Developer Mode
+                </h3>
+                <p>
+                  Toggle on the "Developer mode" switch in the top right corner
+                  of the Extensions page.
+                </p>
+              </li>
+              <li class="mb-4">
+                <h3 class="text-lg sm:text-xl font-semibold mb-2">
+                  Load Unpacked Extension
+                </h3>
+                <p>
+                  Click on the "Load unpacked" button that appears after
+                  enabling Developer mode.
+                </p>
+              </li>
+              <li class="mb-4">
+                <h3 class="text-lg sm:text-xl font-semibold mb-2">
+                  Select Extension Directory
+                </h3>
+                <p>
+                  Browse to the folder containing the extension files and select
+                  it.
+                </p>
+              </li>
+              <li>
+                <h3 class="text-lg sm:text-xl font-semibold mb-2">
+                  Confirm Installation
+                </h3>
+                <p>
+                  The extension should now appear in your list of installed
+                  extensions and be ready to use!
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section id="install" class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+          <h2 class="text-2xl sm:text-3xl font-bold mb-8">
+            Ready to Extract Colors?
+          </h2>
+          <a
+            href="https://techwithtobi.lemonsqueezy.com/buy/e1e934a2-18bb-4e76-9612-c3cb12d4b9fc"
+            class="bg-indigo-600 text-white px-6 sm:px-8 py-3 rounded-full font-semibold text-lg hover:bg-indigo-700 transition duration-300"
+            >Add to Chrome</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="container mx-auto px-4 sm:px-6 text-center">
+        <p>© 2024 One-Click Color Palette Extractor. All rights reserved.</p>
+      </div>
+    </footer>
+  </body> -->
+
+  <body
+    class="bg-gradient-to-b from-purple-100 to-pink-100 min-h-screen flex flex-col"
+  >
+    <header
+      class="bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm shadow-md"
+    >
+      <nav
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="100"
+            height="50"
+            viewBox="0 0 100 50"
+          >
+            <image
+              xlink:href="data:image/png;base64,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"
+              x="0"
+              y="0"
+              width="100"
+              height="50"
+            />
+          </svg>
+          <span class="ml-2 text-xl font-bold text-purple-600">Pale</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            href="#features"
+            class="text-gray-600 hover:text-purple-600 transition duration-300"
+            >Features</a
+          >
+          <a
+            href="#how-it-works"
+            class="text-gray-600 hover:text-purple-600 transition duration-300"
+            >How It Works</a
+          >
+          <a
+            href="#install"
+            class="text-gray-600 hover:text-purple-600 transition duration-300"
+            >Install</a
+          >
+        </div>
+        <div class="md:hidden">
+          <button
+            class="text-gray-600 hover:text-purple-600 focus:outline-none"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-grow">
+      <section class="py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+          <h1
+            class="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600"
+          >
+            Extract Color Palettes from Any Webpage
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 text-gray-700 max-w-3xl mx-auto">
+            Pale is a powerful Chrome extension that helps you capture and
+            organize color palettes from your favorite websites.
+          </p>
+          <a
+            href="https://techwithtobi.lemonsqueezy.com/buy/e1e934a2-18bb-4e76-9612-c3cb12d4b9fc"
+            class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block"
+          >
+            Download Now
+          </a>
+        </div>
+      </section>
+
+      <section id="features" class="py-20 bg-white bg-opacity-50">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center mb-12 text-purple-600"
+          >
+            Features
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12 mx-auto mb-4 text-purple-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+                />
+              </svg>
+              <h3 class="text-xl font-bold mb-2 text-purple-600">
+                Color Extraction
+              </h3>
+              <p class="text-gray-600">
+                Extract colors from any webpage with a single click.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12 mx-auto mb-4 text-pink-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                />
+              </svg>
+              <h3 class="text-xl font-bold mb-2 text-pink-600">
+                Organized Display
+              </h3>
+              <p class="text-gray-600">
+                View extracted colors in a clean, organized interface.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12 mx-auto mb-4 text-purple-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+                />
+              </svg>
+              <h3 class="text-xl font-bold mb-2 text-purple-600">
+                RGB and HEX Support
+              </h3>
+              <p class="text-gray-600">
+                View and copy colors in both RGB and HEX formats.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="py-20">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center mb-12 text-purple-600"
+          >
+            How It Works
+          </h2>
+          <div x-data="{ activeTab: 'extract' }" class="max-w-3xl mx-auto">
+            <div class="flex mb-4">
+              <button
+                @click="activeTab = 'extract'"
+                :class="{ 'bg-purple-600 text-white': activeTab === 'extract', 'bg-purple-100 text-purple-600': activeTab !== 'extract' }"
+                class="flex-1 py-2 px-4 rounded-tl-lg rounded-tr-lg font-semibold transition duration-300"
+              >
+                Extract
+              </button>
+              <button
+                @click="activeTab = 'view'"
+                :class="{ 'bg-purple-600 text-white': activeTab === 'view', 'bg-purple-100 text-purple-600': activeTab !== 'view' }"
+                class="flex-1 py-2 px-4 font-semibold transition duration-300"
+              >
+                View
+              </button>
+              <button
+                @click="activeTab = 'copy'"
+                :class="{ 'bg-purple-600 text-white': activeTab === 'copy', 'bg-purple-100 text-purple-600': activeTab !== 'copy' }"
+                class="flex-1 py-2 px-4 rounded-tr-lg rounded-tl-lg font-semibold transition duration-300"
+              >
+                Copy
+              </button>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+              <div x-show="activeTab === 'extract'" class="space-y-4">
+                <!-- https://i.ibb.co/w0f9YNj/brandbird-15.png
+https://i.ibb.co/P9R28Wr/brandbird-14.png
+https://i.ibb.co/867xKPn/brandbird-13.png -->
+                <img
+                  src="https://i.ibb.co/867xKPn/brandbird-13.png"
+                  alt="Color extraction demo"
+                  class="w-full rounded-lg"
+                />
+                <p class="text-gray-600">
+                  Click the Pale icon to extract colors from the current
+                  webpage. Our advanced algorithm detects the most prominent
+                  colors.
+                </p>
+              </div>
+              <div
+                x-show="activeTab === 'view'"
+                class="space-y-4"
+                style="display: none"
+              >
+                <img
+                  src="https://i.ibb.co/P9R28Wr/brandbird-14.png"
+                  alt="Color viewing demo"
+                  class="w-full rounded-lg"
+                />
+                <p class="text-gray-600">
+                  View the extracted colors in an organized grid. Each color is
+                  displayed with its RGB and HEX values.
+                </p>
+              </div>
+              <div
+                x-show="activeTab === 'copy'"
+                class="space-y-4"
+                style="display: none"
+              >
+                <img
+                  src="https://i.ibb.co/w0f9YNj/brandbird-15.png"
+                  alt="Color copy demo"
+                  class="w-full rounded-lg"
+                />
+                <p class="text-gray-600">
+                  Easily copy the RGB or HEX values of any color with a single
+                  click. Perfect for use in your designs or code.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="install" class="py-20 bg-white bg-opacity-50">
+        <div class="container mx-auto px-6">
+          <h2
+            class="text-3xl md:text-4xl font-bold text-center mb-12 text-purple-600"
+          >
+            How to Install
+          </h2>
+          <div class="flex flex-col md:flex-row gap-8">
+            <div class="flex-1">
+              <div x-data="{ openStep: null }">
+                <div class="mb-4">
+                  <button
+                    @click="openStep = (openStep === 1 ? null : 1)"
+                    class="flex justify-between items-center w-full p-4 bg-white rounded-lg shadow-md"
+                  >
+                    <span class="font-semibold text-left"
+                      >1. Download the Extension</span
+                    >
+                    <svg
+                      :class="{'rotate-180': openStep === 1}"
+                      class="w-5 h-5 transition-transform duration-200"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div
+                    x-show="openStep === 1"
+                    class="p-4 bg-white rounded-b-lg shadow-md mt-1"
+                  >
+                    Click the "Download" button at the top of this page to get
+                    the Pale extension ZIP file.
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <button
+                    @click="openStep = (openStep === 2 ? null : 2)"
+                    class="flex justify-between items-center w-full p-4 bg-white rounded-lg shadow-md"
+                  >
+                    <span class="font-semibold text-left"
+                      >2. Unzip the File</span
+                    >
+                    <svg
+                      :class="{'rotate-180': openStep === 2}"
+                      class="w-5 h-5 transition-transform duration-200"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div
+                    x-show="openStep === 2"
+                    class="p-4 bg-white rounded-b-lg shadow-md mt-1"
+                  >
+                    Locate the downloaded ZIP file and extract its contents to a
+                    folder on your computer.
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <button
+                    @click="openStep = (openStep === 3 ? null : 3)"
+                    class="flex justify-between items-center w-full p-4 bg-white rounded-lg shadow-md"
+                  >
+                    <span class="font-semibold text-left"
+                      >3. Open Chrome Extensions Page</span
+                    >
+                    <svg
+                      :class="{'rotate-180': openStep === 3}"
+                      class="w-5 h-5 transition-transform duration-200"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div
+                    x-show="openStep === 3"
+                    class="p-4 bg-white rounded-b-lg shadow-md mt-1"
+                  >
+                    In Chrome, navigate to chrome://extensions or click Menu >
+                    More Tools > Extensions.
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <button
+                    @click="openStep = (openStep === 4 ? null : 4)"
+                    class="flex justify-between items-center w-full p-4 bg-white rounded-lg shadow-md"
+                  >
+                    <span class="font-semibold text-left"
+                      >4. Enable Developer Mode</span
+                    >
+                    <svg
+                      :class="{'rotate-180': openStep === 4}"
+                      class="w-5 h-5 transition-transform duration-200"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div
+                    x-show="openStep === 4"
+                    class="p-4 bg-white rounded-b-lg shadow-md mt-1"
+                  >
+                    Toggle on the "Developer mode" switch in the top right
+                    corner of the Extensions page.
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <button
+                    @click="openStep = (openStep === 5 ? null : 5)"
+                    class="flex justify-between items-center w-full p-4 bg-white rounded-lg shadow-md"
+                  >
+                    <span class="font-semibold text-left"
+                      >5. Load the Extension</span
+                    >
+                    <svg
+                      :class="{'rotate-180': openStep === 5}"
+                      class="w-5 h-5 transition-transform duration-200"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+                  <div
+                    x-show="openStep === 5"
+                    class="p-4 bg-white rounded-b-lg shadow-md mt-1"
+                  >
+                    Click "Load unpacked" and select the folder where you
+                    extracted the Pale extension files.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="aspect-w-16 aspect-h-9">
+                <div style="position: relative; padding-bottom: 56.162246489859605%; height: 0;"><iframe src="https://www.loom.com/embed/7a9682c23e5d4a9ab716d316f62cfa55?sid=eaadfbca-d182-4f0c-b56b-1abada743606" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20">
+        <div class="container mx-auto px-6 text-center">
+          <h2
+            class="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600"
+          >
+            Start Extracting Colors Today
+          </h2>
+          <p class="text-xl mb-8 text-gray-700 max-w-2xl mx-auto">
+            Join designers and developers who use Pale to streamline their color
+            workflow.
+          </p>
+          <a
+            href="https://techwithtobi.lemonsqueezy.com/buy/e1e934a2-18bb-4e76-9612-c3cb12d4b9fc"
+            class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 inline-block"
+          >
+            Download Pale
+          </a>
+          <p class="mt-4 text-sm text-gray-500">
+            Currently free for everyone! Pro version coming soon.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm">
+      <div
+        class="container mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center"
+      >
+        <p class="text-gray-600 text-sm">© 2024 Pale. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
